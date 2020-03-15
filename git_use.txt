@@ -1,0 +1,3 @@
+【git 只提交某个文件的修改内容】
+git commit <file> -m"your comment"
+不需要先git add，执行后，直接git push即可
