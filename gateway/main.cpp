@@ -13,6 +13,7 @@ void signint_handler(int) {return;}
 
 int main()
 {
+#ifdef _WIN32
 	WSADATA wsaData = { 0 };
 	int nErrCode = 0;
 	nErrCode = WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -20,6 +21,7 @@ int main()
 	{
 		return 0;
 	}
+#endif
 
 	signal(SIGINT, &signint_handler);
 
@@ -62,7 +64,9 @@ int main()
 	gateway.stop();
 	cout << "gateway stop successfully" << endl;
 
+#ifdef _WIN32
 	WSACleanup();
+#endif
 
 	return 0;
 }
