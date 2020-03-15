@@ -1,9 +1,0 @@
-【常用命令】
-git status
-git add file
-git commit [file] -m 'log info'
-git push [-u] origin master
-
-【git 只提交某个文件的修改内容】
-git commit <file> -m"your comment"
-不需要先git add，执行后，直接git push即可
